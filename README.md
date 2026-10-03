@@ -28,7 +28,44 @@
 
 ---
 
+## 🧭 Quick Navigation
+
+| 🚀 Start | 📐 Understand | 🧪 Verify | 🎥 Demo |
+|---|---|---|---|
+| [⚙️ Setup](#️-local-setup) | [🏗️ Architecture](#️-architecture) | [🧪 Evidence](#-evidence) | [🎥 Loom](#-demo) |
+
+---
+
 ## 🏗️ Architecture
+
+```mermaid
+flowchart LR
+    A[🎙️ Retell AI] -->|WSS| B[🌐 ngrok]
+    B --> C[🟦 Node.js WebSocket]
+    C -->|HTTPS| D[✨ Gemini 2.5 Flash]
+    D --> C
+    C -->|JSON response| A
+```
+
+### Event Flow
+
+```mermaid
+sequenceDiagram
+    participant R as Retell
+    participant N as Node.js WSS
+    participant G as Gemini
+
+    R->>N: response_required
+    N->>N: Validate auth + build context
+    N->>G: Generate response
+    G-->>N: Model response
+    N-->>R: response JSON
+    R->>N: update_only / next event
+    R->>N: Goodbye
+    N-->>R: end_call: true
+```
+
+### Component Flow
 
 ```text
 ┌──────────────────────┐
@@ -62,6 +99,38 @@
            ▼
       Response → Retell
 ```
+
+---
+
+<details>
+<summary>🔍 Click to inspect the implementation</summary>
+
+### WebSocket Responsibilities
+
+- Authenticate the incoming connection.
+- Identify the Retell call ID.
+- Parse incoming JSON events.
+- Ignore unsupported event types safely.
+- Process `update_only` without generating an answer.
+- Process `response_required` through Gemini.
+- Return Retell-compatible JSON.
+- Detect goodbye intent and send `end_call: true`.
+- Log connection, response, error, and close events.
+
+</details>
+
+<details>
+<summary>🛡️ Security checklist</summary>
+
+- 🔒 API keys remain in `.env`.
+- 🚫 `.env` is not committed.
+- 🔐 WebSocket authentication uses a query parameter.
+- 🧹 Public screenshots redact credentials.
+- ♻️ Previously exposed local auth tokens should be rotated after submission.
+
+</details>
+
+---
 
 ---
 
