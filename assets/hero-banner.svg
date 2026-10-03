@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="420" viewBox="0 0 1400 420">
+<defs>
+  <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0%" stop-color="#050816"/>
+    <stop offset="50%" stop-color="#0b1738"/>
+    <stop offset="100%" stop-color="#101a4f"/>
+  </linearGradient>
+  <linearGradient id="accent" x1="0" x2="1">
+    <stop offset="0%" stop-color="#36d1dc"/>
+    <stop offset="50%" stop-color="#5b8cff"/>
+    <stop offset="100%" stop-color="#a855f7"/>
+  </linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0H0V40" fill="none" stroke="#5b8cff" stroke-opacity=".09"/>
+  </pattern>
+</defs>
+<rect width="1400" height="420" rx="28" fill="url(#bg)"/>
+<rect width="1400" height="420" rx="28" fill="url(#grid)"/>
+<g opacity=".55" filter="url(#glow)">
+  <circle cx="110" cy="85" r="3" fill="#36d1dc">
+    <animate attributeName="cy" values="85;330;85" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1280" cy="330" r="3" fill="#a855f7">
+    <animate attributeName="cy" values="330;70;330" dur="6s" repeatCount="indefinite"/>
+  </circle>
+</g>
+<g stroke="url(#accent)" stroke-width="2" fill="none" opacity=".7">
+  <path d="M100 300 C260 190 360 190 510 260 S780 340 920 205 S1160 100 1300 170">
+    <animate attributeName="stroke-dasharray" values="1 20;20 1;1 20" dur="4s" repeatCount="indefinite"/>
+  </path>
+</g>
+<g transform="translate(700 105)" text-anchor="middle">
+  <text y="0" fill="#8be9fd" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" letter-spacing="6">RETELL AI • TOPIC 6</text>
+  <text y="68" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="800">CUSTOM LLM</text>
+  <text y="112" fill="url(#accent)" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700">GOOGLE GEMINI × WEBSOCKETS</text>
+  <text y="158" fill="#aab7d4" font-family="Arial,Helvetica,sans-serif" font-size="18">Voice Agent • WSS • ngrok • Node.js • Gemini 2.5 Flash</text>
+</g>
+<g transform="translate(140 205)" font-family="Arial,Helvetica,sans-serif">
+  <g>
+    <rect x="0" y="0" width="210" height="72" rx="16" fill="#0e2146" stroke="#36d1dc" stroke-opacity=".65"/>
+    <text x="105" y="30" fill="#8be9fd" font-size="15" text-anchor="middle" font-weight="700">RETELL</text>
+    <text x="105" y="53" fill="#fff" font-size="13" text-anchor="middle">Voice Agent</text>
+  </g>
+  <g>
+    <rect x="500" y="0" width="210" height="72" rx="16" fill="#111c48" stroke="#5b8cff" stroke-opacity=".65"/>
+    <text x="605" y="30" fill="#a9c4ff" font-size="15" text-anchor="middle" font-weight="700">WEBSOCKET</text>
+    <text x="605" y="53" fill="#fff" font-size="13" text-anchor="middle">Secure WSS</text>
+  </g>
+  <g>
+    <rect x="1000" y="0" width="210" height="72" rx="16" fill="#24144a" stroke="#a855f7" stroke-opacity=".65"/>
+    <text x="1105" y="30" fill="#d8b4fe" font-size="15" text-anchor="middle" font-weight="700">GEMINI</text>
+    <text x="1105" y="53" fill="#fff" font-size="13" text-anchor="middle">2.5 Flash</text>
+  </g>
+  <circle cx="270" cy="36" r="7" fill="#36d1dc"><animate attributeName="cx" values="225;475;225" dur="2.2s" repeatCount="indefinite"/></circle>
+  <circle cx="770" cy="36" r="7" fill="#5b8cff"><animate attributeName="cx" values="725;975;725" dur="2.2s" repeatCount="indefinite"/></circle>
+</g>
+<text x="700" y="365" fill="#7182a8" font-family="Arial,Helvetica,sans-serif" font-size="14" text-anchor="middle">BUILD • CONNECT • STREAM • CONTROL</text>
+</svg>
