@@ -1,18 +1,12 @@
 <div align="center">
 
-# 🚀 Retell AI — Topic 6 Custom LLM
+<img src="assets/hero-banner.svg" alt="Animated Retell AI Topic 6 Custom LLM banner" width="100%"/>
 
-### Google Gemini • WebSockets • ngrok • Retell AI
+<p><b>Retell AI × Google Gemini × WebSockets</b></p>
 
-<p>
-  <a href="https://www.loom.com/share/572e0af396d74336b279f9ad8ef74464"><img src="https://img.shields.io/badge/🎥%20Loom-Demo-625DF5?style=for-the-badge" alt="Loom Demo"></a>
-  <a href="https://github.com/shaikshahid777/retell-ai-topic-6-custom-llm"><img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
-  <img src="https://img.shields.io/badge/Node.js-24.x-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
-  <img src="https://img.shields.io/badge/Google%20Gemini-2.5%20Flash-4285F4?style=for-the-badge&logo=google" alt="Gemini">
-  <img src="https://img.shields.io/badge/WebSocket-WSS-111827?style=for-the-badge" alt="WebSocket">
-</p>
-
-<p><b>A hands-on Retell AI Custom LLM integration connecting a voice agent to Google Gemini through a public WebSocket endpoint.</b></p>
+<a href="https://www.loom.com/share/572e0af396d74336b279f9ad8ef74464">🎥 <b>Watch Demo</b></a> •
+<a href="https://github.com/shaikshahid777/retell-ai-topic-6-custom-llm/blob/main/README.md">📖 <b>Documentation</b></a> •
+<a href="https://github.com/shaikshahid777/retell-ai-topic-6-custom-llm/tree/main/assets">🖼️ <b>Assets</b></a>
 
 </div>
 
